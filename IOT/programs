@@ -1,0 +1,51 @@
+//Program 1 (LED Blink)
+import RPi. GPIO as GPIO
+import time
+GPIO. Setwarnings (False)
+GPIO.Setmode (GPIO.BCM)
+GPIP.Setup (4, GPI.Out)
+While true:
+GPIO. Output (4,GPIO.HIGH)
+time. sleep (1)
+GPIO. Output (4, GPIO.LOW)
+time. sleep (1)
+
+
+
+//PROGRAM 2 (Buzzer)
+import RPi.GPIO as GPIO
+import time
+GPIO. setmode (GPIO. BCM)
+GPIO. setwarnings (False)
+BUZZER = 23
+buzzState = False
+GPIO. Setup (BUZZER, GPIO.OUT)
+While True:
+buzzState = not buzzState
+GPIO. Output( BUZZER, buzzState).
+time.sleep(1)
+
+
+
+// PROGRAM 3 (Toggle LEDs)
+import RPi.GPIO as GPIO
+import time
+GPIO Setmode (GIPIO.BCM)
+LED1_PIN = 17
+LED2_PIN = 27
+GPIO.Setup ( LED1 PIN, GPIO.OUT)
+GPID.Setup (LED2_PIN, GPIO.OUT)
+try:
+While True:
+#turn on Led 1 & turn off LED 2
+GPIO.Output (LED1_PIN, GPIO.HIGH)
+GPIO. Output (LED2_PIN, GPIO. LOW)
+Print ("LED1 ON, LED2 OFF")
+time.sleep (1)
+GPIO.Output ( LED1_PIN, GPIO. LOW)
+GPIO. Output ( LED2_PIN, GPIO.HIGH)
+Print(" LED 1 OFF, LED 2 of ON 7
+time. sleep (1)
+except keyboardInterrupt:
+GPIO. Cleanup()
+Print(" Program exited cleanly")
